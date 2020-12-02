@@ -26,5 +26,5 @@ $ser = new Intervals();
 set_time_limit(0);
 while(true) {
 	echo $ser->loadCalulate(2, $load);
-	sleep(10);
+	sleep(300);
 }
