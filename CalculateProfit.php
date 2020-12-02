@@ -21,14 +21,14 @@ $vadaProfit = new CalculateProfit();
 $samosaProfit = new CalculateProfit();
 
 $vada = $vadaProfit->claculate('3', '5', '10');
-$samaosa = $samosaProfit->claculate('3', '9', '15');
+$samosa = $samosaProfit->claculate('3', '9', '15');
 
 echo '---------VADA--------'; echo '</br>';
 echo 'Profit of Vada : '.$vada['profit']; echo "</br>";
 echo 'Remaning Bread : '. $vada['remaning_bread']; echo '</br>';
 
 echo '---------SAMOSA--------'; echo '</br>';
-echo 'Profit of SAMOSA : '.$samaosa['profit']; echo "</br>";
-echo 'Remaning Bread : '. $samaosa['remaning_bread']; echo '</br>';
+echo 'Profit of SAMOSA : '.$samosa['profit']; echo "</br>";
+echo 'Remaning Bread : '. $samosa['remaning_bread']; echo '</br>';
 
 ?>
