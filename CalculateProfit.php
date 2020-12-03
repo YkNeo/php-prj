@@ -1,27 +1,37 @@
-<?php 
-
+<?php
 Class CalculateProfit
 {
-    public function claculate($item, $bread, $price)
+	public $bread = 15;
+
+    public function calculate($item, $price)
     {
         $profit=0;
         for($i=0; $i<$item; $i++)
         {
-            if($bread > 2){
+            if($this->bread > 2){
                 $profit = $profit + $price;
-                $bread = $bread - 2;
+                $this->bread = $this->bread - 2;
             }
         }
         
-        return array('profit' => $profit, 'remaning_bread' => $bread);
+        return array('profit' => $profit, 'remaning_bread' => $this->bread);
+    }
+
+    public function profitVada()
+    {
+    	return $this->calculate('3', '10');
+    }
+
+    public function profitSamosa()
+    {
+    	return $this->calculate('3', '15');	
     }
 }
 
-$vadaProfit = new CalculateProfit();
-$samosaProfit = new CalculateProfit();
+$profitClass = new CalculateProfit();
 
-$vada = $vadaProfit->claculate('3', '5', '10');
-$samosa = $samosaProfit->claculate('3', '9', '15');
+$vada = $profitClass->profitVada('3', '10');
+$samosa = $profitClass->profitSamosa('3', '15');
 
 echo '---------VADA--------'; echo '</br>';
 echo 'Profit of Vada : '.$vada['profit']; echo "</br>";
